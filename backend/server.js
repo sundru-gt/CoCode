@@ -15,6 +15,9 @@ const io = new Server(httpServer, {
     }
 })
 
+// Initialize YSocketIO to handle the document sync
+const ySocketIO = new YSocketIO(io)
+ySocketIO.initialize()
 
 //health routes
 app.get("/", (req, res) => {
