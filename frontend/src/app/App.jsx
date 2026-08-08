@@ -1,0 +1,23 @@
+import "./App.css"
+import { Editor } from "@monaco-editor/react"
+function App() {
+  return (
+    <>
+      <main
+        className="h-screen w-full bg-gray-950 flex gap-4 p-4">
+        <aside
+          className="h-full w-1/4 bg-amber-50 rounded-lg"></aside>
+        <section
+          className="h-full w-3/4 bg-emerald-100 rounded-lg">
+          <Editor
+            height="100%"
+            defaultLanguage="javascript"
+            value={"console.log(\"Hello, World!\");"}
+            theme="vs-dark"
+          />
+        </section>
+      </main></>
+  )
+}
+
+export default App
